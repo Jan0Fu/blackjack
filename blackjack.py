@@ -1,5 +1,6 @@
 import random
-#from art import logo
+import os
+from art import logo
 
 def deal_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -31,8 +32,8 @@ def compare(user_score, cpu_score):
         return "You lose!"  
 
 def blackjack():
-
-    #print(logo)
+    os.system('clear')
+    print(logo)
     user_cards = []
     cpu_cards = []
     game_over = False
@@ -63,8 +64,5 @@ def blackjack():
     print(f"   Dealers final hand: {cpu_cards}, final score: {cpu_score}")
     print(compare(user_score, cpu_score))
 
-#Hint 14: Ask the user if they want to restart the game. 
-#If they answer yes, clear the console and start a new game of blackjack
-#and show the logo from art.py.
 while input("Do you want to play Blackjack? Type 'y' or 'n': " ) == "y":
     blackjack()
